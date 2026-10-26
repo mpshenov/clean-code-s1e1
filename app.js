@@ -1,12 +1,3 @@
-//Document is the DOM can be accessed in the console with document.window.
-// Tree is from the top, html, body, p etc.
-
-//Problem: User interaction does not provide the correct results.
-//Solution: Add interactivity so the user can manage daily tasks.
-//Break things down into smaller steps and take each step at a time.
-
-// Event handling, user interaction is what starts the code execution.
-
 const newTaskInput = document.getElementById("new-task");
 const addTaskButton = document.getElementsByTagName("button")[0];
 const todoList = document.getElementById("incompleteTasks");
@@ -95,10 +86,6 @@ const deleteTask = function () {
   ul.removeChild(taskItem);
 };
 
-const taskCompleted = function () {
-  moveTask(this.parentNode, completedList, taskIncomplete);
-};
-
 const moveTask = function (taskItem, list, handler) {
   list.appendChild(taskItem);
   bindTaskEvents(taskItem, handler);
@@ -106,6 +93,10 @@ const moveTask = function (taskItem, list, handler) {
 
 const taskIncomplete = function () {
   moveTask(this.parentNode, todoList, taskCompleted);
+};
+
+const taskCompleted = function () {
+  moveTask(this.parentNode, completedList, taskIncomplete);
 };
 
 addTaskButton.addEventListener("click", addTask);
@@ -129,9 +120,3 @@ for (let i = 0; i < todoList.children.length; i++) {
 for (let i = 0; i < completedList.children.length; i++) {
   bindTaskEvents(completedList.children[i], taskIncomplete);
 }
-
-// Issues with usability don't get seen until they are in front of a human tester.
-
-//prevent creation of empty tasks.
-
-//Change edit to save when you are in edit mode.

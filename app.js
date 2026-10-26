@@ -96,15 +96,16 @@ const deleteTask = function () {
 };
 
 const taskCompleted = function () {
-  const taskItem = this.parentNode;
-  completedList.appendChild(taskItem);
-  bindTaskEvents(taskItem, taskIncomplete);
+  moveTask(this.parentNode, completedList, taskIncomplete);
+};
+
+const moveTask = function (taskItem, list, handler) {
+  list.appendChild(taskItem);
+  bindTaskEvents(taskItem, handler);
 };
 
 const taskIncomplete = function () {
-  const taskItem = this.parentNode;
-  todoList.appendChild(taskItem);
-  bindTaskEvents(taskItem, taskCompleted);
+  moveTask(this.parentNode, todoList, taskCompleted);
 };
 
 addTaskButton.addEventListener("click", addTask);

@@ -1,0 +1,28 @@
+{
+  "name": "clean-code-s1e1",
+  "version": "1.0.0",
+  "description": "<img width=\"1199\" alt=\"code-quality-task-screenshot\" src=\"https://user-images.githubusercontent.com/8201843/113413843-4080fb80-93c4-11eb-9f20-15e4b4c1e430.png\">",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpshenov/clean-code-s1e1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mpshenov/clean-code-s1e1/issues"
+  },
+  "homepage": "https://github.com/mpshenov/clean-code-s1e1#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10"
+  }
+}
